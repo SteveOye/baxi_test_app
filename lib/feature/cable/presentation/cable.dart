@@ -27,6 +27,7 @@ class _CableState extends State<Cable> {
   int index = 0;
   int indexPrice = 0;
   List<String> listPrice = [];
+  bool editCardNo = true;
 
   final _chars =
       'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890';
@@ -61,6 +62,7 @@ class _CableState extends State<Cable> {
               title: 'Card number',
               keyboadType: TextInputType.number,
               controller: cardController,
+              enable: editCardNo,
             ),
             const SizedBox(
               height: 24,
@@ -85,12 +87,16 @@ class _CableState extends State<Cable> {
                   var cardNo = cardController.text.trim();
                   if (cardNo.isEmpty) {
                     showGetSnackBar(message: 'Enter DSTV card number');
+                  } else if (cardNo.length != 10) {
+                    showGetSnackBar(
+                        message: 'Invalid card number (10 digits expected)');
                   } else {
                     Map<String, dynamic> params = {
                       "account_number": cardNo,
                       "service_type": 'dstv',
                     };
                     await _cableController.validateCard(params, context);
+                    editCardNo = false;
 
                     setState(() {
                       _cableController.name.value.isNotEmpty
