@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "951362252333",
+    "project_id": "baxi-test-app",
+    "storage_bucket": "baxi-test-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:951362252333:android:191e893234fda15520d2a4",
+        "android_client_info": {
+          "package_name": "com.base.task.baxi_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "951362252333-68k7lf6jprv6bgolq9tqlp3s6nkth49g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbSTM6-yqb-L1iQyyojXuVxhub17y00Vg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "951362252333-68k7lf6jprv6bgolq9tqlp3s6nkth49g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

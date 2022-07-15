@@ -40,9 +40,12 @@ class _DashboardState extends State<Dashboard> {
                       children: const [
                         Padding(
                           padding: EdgeInsets.only(top: 120, left: 16),
-                          child: Text(
-                            'Hi User,',
-                            style: TextStyle(fontSize: 24),
+                          child: Center(
+                            child: Text(
+                              'Hi from Baxi,',
+                              style: TextStyle(
+                                  fontSize: 24, fontWeight: FontWeight.w800),
+                            ),
                           ),
                         ),
                       ],
