@@ -153,6 +153,10 @@ class _BuyDataState extends State<BuyData> {
                   showGetSnackBar(message: 'Select bundle');
                 } else if (phone.isEmpty) {
                   showGetSnackBar(message: 'Enter mobile number to be top_up');
+                } else if (phone.length != 11) {
+                  showGetSnackBar(
+                      message:
+                          'Invalid number, try again. Number should be 11 digits');
                 } else {
                   _dataController.buyData(
                     DataRequest(

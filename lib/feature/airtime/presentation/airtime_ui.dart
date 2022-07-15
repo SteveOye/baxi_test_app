@@ -134,6 +134,10 @@ class _AirtimeUiState extends State<AirtimeUi> {
                       message: 'Amount should be between NGN50 - NGN50,000');
                 } else if (network.toString().isEmpty || network == null) {
                   showGetSnackBar(message: 'Select provider');
+                } else if (phone.length != 11) {
+                  showGetSnackBar(
+                      message:
+                          'Invalid number, try again. Number should be 11 digits');
                 } else {
                   Airtime airtime = Airtime(
                     agentReference: getRandomString(7),
